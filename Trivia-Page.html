@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="assets/css/style.css">
+    <script src="assets/javascript/app.js"></script>
+</head>
+<body bg-color= "grey">
+<H1 id="Timer"> Time Remaining: </H1>
+
+<form id= "Trivia" action="results.html" method="GET">
+
+<h1>What year did Derrick Rose win MVP?</h1>
+
+<center>
+<input type="radio" name="Q1" value="2009"> 2009
+
+<input type="radio" name="Q1" value="2010"> 2010
+
+<input type="radio" name="Q1" value="2011"> 2011
+
+<input type="radio" name="Q1" value="2012"> 2012<br></center>
+
+
+<h1>How many chamionships has Michael Jordan won?</h1>
+
+<center>
+<input type="radio" name="Q2" value="3"> 3
+
+<input type="radio" name="Q2" value="5"> 5 
+    
+<input type="radio" name="Q2" value="7"> 7
+    
+<input type="radio" name="Q2" value="6"> 6<br></center>
+
+<h1>Did Michael Jordan wear a different jersey number than 23?</h1>
+
+<center>
+<input type="radio" name="Q3" value="No"> No
+        
+<input type="radio" name="Q3" value="Yes45"> Yes, number 45
+            
+<input type="radio" name="Q3" value="Yes4512"> Yes, 45 and 12<br></center>
+
+
+
+<h1>Which nickname did Allen Iverson go by? </h1>
+
+<center>
+<input type="radio" name="Q4" value=""Answer""> "The Answer"
+        
+<input type="radio" name="Q4" value=""AI""> "A.I"
+            
+<input type="radio" name="Q4" value=""BubbaChucks""> "Bubba Chucks"
+
+<input type="radio" name="Q4" value="All"> All three were his nicknames<br></center>
+
+            
+<h1>What year was Lebron James drafted into the NBA? </h1>
+
+<center>
+<input type="radio" name="Q5" value="2003"> 2003
+        
+<input type="radio" name="Q5" value="2004"> 2004
+            
+<input type="radio" name="Q5" value="2000"> 2000
+
+<input type="radio" name="Q5" value="2002"> 2002<br></center>
+
+<h1>Which player has scored 81 points in a game?</h1>
+
+<center>
+<input type="radio" name="Q6" value="Kobe"> Kobe Bryant
+        
+<input type="radio" name="Q6" value="Lebron"> Lebron James
+            
+<input type="radio" name="Q6" value="Michael"> Michael Jordan
+
+<input type="radio" name="Q6" value="Wilt"> Wilt Chamberlin<br></center>
+
+<h1>Which NBA team has won the most chamionships ever?</h1>
+
+<center>
+<input type="radio" name="Q7" value="Bulls"> Chicago Bulls 
+        
+<input type="radio" name="Q7" value="Celtics"> Boston Celtics 
+            
+<input type="radio" name="Q7" value="Lakers"> Los Angeles Lakers
+
+<input type="radio" name="Q7" value="Warriors"> Golden State Warriors<br></center>
+
+<h1>How many games did the warriors win during the 2015-2016 season?</h1>
+
+<center>
+<input type="radio" name="Q8" value="73"> 73
+        
+<input type="radio" name="Q8" value="71"> 71
+            
+<input type="radio" name="Q8" value="69"> 69
+
+<input type="radio" name="Q8" value="67"> 67<br></center>
+
+
+
+
+
+
+
+
+
+<center><button type="submit" value = "SUBMIT">SUBMIT</button></center> 
+</form>
+<script>
+
+        // Set the time we're counting down to
+        
+         var mins =1;
+        
+        var countDownDate = new Date().getTime() + mins * 60000;
+        
+        // Update the count down every 1 second
+        
+        var x = setInterval(function() {
+        
+         
+        
+            // Get todays date and time
+        
+            var now = new Date().getTime();
+        
+           
+        
+            // Find the distance between now an the count down date
+        
+            var distance = countDownDate - now;
+        
+           
+        
+            // Time calculations for days, hours, minutes and seconds
+        
+           
+        
+            var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+        
+           
+        
+            // Output the result in an element with id="demo"
+        
+            document.getElementById("Timer").innerHTML =  "Time Remaining:"+ seconds + "s ";
+        
+           
+        
+            // If the count down is over, write some text
+        
+            if (distance < 0) {
+        
+                clearInterval(x);
+        
+                document.getElementById("Trivia").submit();
+        
+            }
+        
+        }, 1000);
+        
+        </script>
+</body>
+</html>
